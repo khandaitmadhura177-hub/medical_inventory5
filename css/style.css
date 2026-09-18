@@ -1,0 +1,74 @@
+/* Custom Properties for a Modern Pharmacy Look */
+:root {
+    --primary: #4318FF;       /* Deep Indigo */
+    --secondary: #2B3674;     /* Navy Text */
+    --accent: #14B8A6;        /* Health Teal */
+    --bg-main: #F4F7FE;       /* Soft Grey-Blue */
+    --white: #FFFFFF;
+    --card-shadow: 0px 20px 50px rgba(0, 0, 0, 0.05);
+    --border-radius: 20px;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--secondary);
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Card Style */
+.mims-card {
+    background: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mims-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Buttons */
+.btn-primary-mims {
+    background: linear-gradient(135deg, #4318FF 0%, #5E3AFF 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary-mims:hover {
+    filter: brightness(1.1);
+    box-shadow: 0px 10px 20px rgba(67, 24, 255, 0.3);
+}
+
+/* Table Customization */
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.custom-table thead th {
+    border: none;
+    color: #A3AED0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-table tbody tr {
+    background: white;
+    box-shadow: var(--card-shadow);
+}
+
+.custom-table tbody td {
+    border: none;
+    padding: 20px;
+}
+
+.custom-table tbody tr td:first-child { border-radius: 15px 0 0 15px; }
+.custom-table tbody tr td:last-child { border-radius: 0 15px 15px 0; }
